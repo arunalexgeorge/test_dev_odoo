@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="retention_advance_report_view_form" model="ir.ui.view">
+        <field name="name">retention.advance.report.form</field>
+        <field name="model">retention.advance.report</field>
+        <field name="arch" type="xml">
+            <form string="Retention and Advance Report">
+                <group>
+                    <group>
+                        <field name="date"/>
+                        <field name="company_ids" widget="many2many_tags" groups="base.group_multi_company"/>
+                    </group>
+                    <group>
+                        <field name="partner_ids" widget="many2many_tags" options="{'no_create': True}"/>
+                        <field name="include_all"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_view" string="View" type="object" class="btn-primary" data-hotkey="q"/>
+                    <button name="action_export_xlsx" string="Export to Excel" type="object" class="btn-secondary" data-hotkey="e"/>
+                    <button string="Discard" class="btn-secondary" special="cancel" data-hotkey="x"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="retention_advance_report_line_view_list" model="ir.ui.view">
+        <field name="name">retention.advance.report.line.list</field>
+        <field name="model">retention.advance.report.line</field>
+        <field name="arch" type="xml">
+            <list create="0" edit="0" delete="0">
+                <field name="currency_id" column_invisible="1"/>
+                <field name="company_id" groups="base.group_multi_company" width="120px"/>
+                <field name="partner_id" width="180px"/>
+                <field name="order_id" width="90px"/>
+                <field name="total_invoiced" sum="Total"/>
+                <field name="retention_held" sum="Total"/>
+                <field name="retention_released" sum="Total"/>
+                <field name="retention_balance" sum="Total" decoration-bf="1"/>
+                <field name="advance_received" sum="Total"/>
+                <field name="advance_recovered" sum="Total"/>
+                <field name="advance_balance" sum="Total" decoration-bf="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="retention_advance_report_line_view_pivot" model="ir.ui.view">
+        <field name="name">retention.advance.report.line.pivot</field>
+        <field name="model">retention.advance.report.line</field>
+        <field name="arch" type="xml">
+            <pivot string="Retention and Advance">
+                <field name="partner_id" type="row"/>
+                <field name="retention_balance" type="measure"/>
+                <field name="advance_balance" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="retention_advance_report_line_view_search" model="ir.ui.view">
+        <field name="name">retention.advance.report.line.search</field>
+        <field name="model">retention.advance.report.line</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="partner_id"/>
+                <field name="order_id"/>
+                <filter name="retention_open" string="Retention Balance" domain="[('retention_balance', '!=', 0)]"/>
+                <filter name="advance_open" string="Advance Balance" domain="[('advance_balance', '!=', 0)]"/>
+                <group>
+                    <filter name="group_partner" string="Customer" context="{'group_by': 'partner_id'}"/>
+                    <filter name="group_company" string="Company" context="{'group_by': 'company_id'}" groups="base.group_multi_company"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_retention_advance_report" model="ir.actions.act_window">
+        <field name="name">Retention &amp; Advance</field>
+        <field name="res_model">retention.advance.report</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

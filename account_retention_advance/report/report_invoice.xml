@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Also inherited by the GCC / Saudi bilingual invoice (primary views built on top of this one). -->
+    <template id="report_invoice_document_retention_advance" inherit_id="account.report_invoice_document">
+        <xpath expr="//t[@t-call='account.document_tax_totals']" position="after">
+            <t t-if="o.move_type in ('out_invoice', 'out_refund') and o._ra_has_deductions()">
+                <t t-set="ra_is_refund" t-value="o.move_type == 'out_refund'"/>
+                <t t-set="ra_in_arabic" t-value="o.company_id.country_id.code == 'SA' and o.company_id.l10n_gcc_dual_language_invoice if 'l10n_gcc_dual_language_invoice' in o.company_id else False"/>
+                <tr t-if="not o.currency_id.is_zero(o.retention_amount)" class="o_ra_retention">
+                    <td>
+                        <span t-if="ra_is_refund">Retention reversed</span>
+                        <span t-else="">Less: Retention (<t t-out="'%g' % o.retention_percent"/>%)</span>
+                        <span t-if="ra_in_arabic" t-translation="off" dir="rtl"> / ناقص: المحتجز كضمان</span>
+                    </td>
+                    <td class="text-end">
+                        <span t-out="-o.retention_amount" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                    </td>
+                </tr>
+                <tr t-if="not o.currency_id.is_zero(o.advance_recovery_amount)" class="o_ra_advance">
+                    <td>
+                        <span t-if="ra_is_refund">Advance recovery reversed</span>
+                        <span t-else="">Less: Advance Recovery</span>
+                        <span t-if="ra_in_arabic" t-translation="off" dir="rtl"> / ناقص: استرداد الدفعة المقدمة</span>
+                    </td>
+                    <td class="text-end">
+                        <span t-out="-o.advance_recovery_amount" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                    </td>
+                </tr>
+                <tr class="o_total o_ra_amount_to_pay fw-bold">
+                    <td>
+                        <strong t-if="ra_is_refund">Net Credit</strong>
+                        <strong t-else="">Amount to Pay Now</strong>
+                        <strong t-if="ra_in_arabic" t-translation="off" dir="rtl"> / المبلغ المستحق الدفع الآن</strong>
+                    </td>
+                    <td class="text-end">
+                        <strong t-out="o.amount_to_pay_now" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                    </td>
+                </tr>
+                <tr t-if="not ra_is_refund and not o.currency_id.is_zero(o.retention_amount) and o.retention_due_date" class="o_ra_retention_due">
+                    <td colspan="2" class="text-muted small">
+                        Retention of <t t-out="o.retention_amount" t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                        due on handover (<t t-out="o.retention_due_date" t-options="{'widget': 'date'}"/>).
+                    </td>
+                </tr>
+            </t>
+        </xpath>
+    </template>
+</odoo>

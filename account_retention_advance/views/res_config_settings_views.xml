@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_retention" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.retention.advance</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='invoicing_settings']" position="after">
+                <block title="Retention &amp; Advance Recovery" id="retention_advance_settings">
+                    <setting id="retention_account_setting" string="Retention"
+                             help="Retention withheld on progress invoices is booked on this account until it is released.">
+                        <div class="content-group">
+                            <div class="row mt8">
+                                <label for="retention_account_id" string="Retention Receivable" class="col-lg-5 o_light_label"/>
+                                <field name="retention_account_id"
+                                       domain="[('reconcile', '=', True), ('account_type', 'in', ('asset_current', 'asset_non_current')), ('company_ids', 'parent_of', company_id)]"/>
+                            </div>
+                            <div class="row mt8">
+                                <label for="retention_percent" string="Default Retention %" class="col-lg-5 o_light_label"/>
+                                <field name="retention_percent"/>
+                            </div>
+                            <div class="row mt8">
+                                <label for="retention_journal_id" string="Release Journal" class="col-lg-5 o_light_label"/>
+                                <field name="retention_journal_id"
+                                       domain="[('type', '=', 'general'), ('company_id', 'parent_of', company_id)]"/>
+                            </div>
+                        </div>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

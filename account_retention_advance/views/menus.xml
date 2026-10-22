@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_account_advance_payments"
+              name="Advance Payments"
+              parent="account.menu_finance_receivables"
+              action="action_account_advance_payments"
+              groups="account.group_account_invoice"
+              sequence="16"/>
+    <menuitem id="menu_retention_release"
+              name="Release Retention"
+              parent="account.menu_finance_receivables"
+              action="action_retention_release_wizard"
+              groups="account.group_account_invoice"
+              sequence="17"/>
+    <menuitem id="menu_retention_advance_report"
+              name="Retention &amp; Advance"
+              parent="account.account_reports_partners_reports_menu"
+              action="action_retention_advance_report"
+              groups="account.group_account_invoice,account.group_account_readonly"
+              sequence="90"/>
+</odoo>

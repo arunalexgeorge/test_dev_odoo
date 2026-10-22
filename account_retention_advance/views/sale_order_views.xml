@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_retention_advance" model="ir.ui.view">
+        <field name="name">sale.order.form.retention.advance</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_advance_payments" type="object" class="oe_stat_button" icon="fa-money"
+                        groups="account.group_account_invoice" invisible="state != 'sale'">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_value"><field name="advance_payment_count"/></span>
+                        <span class="o_stat_text">Advances</span>
+                    </div>
+                </button>
+            </xpath>
+            <xpath expr="//group[@name='sale_info']" position="after">
+                <group name="retention_advance" string="Retention &amp; Advance">
+                    <field name="retention_percent"/>
+                    <field name="advance_recovery_percent"/>
+                    <field name="expected_handover_date"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

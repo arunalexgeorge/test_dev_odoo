@@ -1,0 +1,1108 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_retention_advance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-22 10:17+0000\n"
+"PO-Revision-Date: 2026-10-22 10:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_retention_advance
+#: model:ir.model.fields.selection,name:account_retention_advance.selection__account_move__advance_recovery_method__percent
+msgid "% of Work Done"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid ""
+"%(move)s gives back %(amount)s of advance but %(origin)s only recovered "
+"%(available)s."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid ""
+"%(move)s reverses %(amount)s of retention but only %(available)s is still "
+"held on %(origin)s."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_release_wizard.py:0
+msgid "%s is not a posted invoice of this customer and company."
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_order_form_retention_advance
+msgid "<span class=\"o_stat_text\">Advances</span>"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_account_payment_form_retention_advance
+msgid "<span class=\"o_stat_text\">Recoveries</span>"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_move_form_retention_advance
+msgid "<span class=\"o_stat_text\">Retention Held</span>"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_move_form_retention_advance
+msgid ""
+"<span class=\"text-nowrap\" invisible=\"move_type != 'out_invoice'\">Amount to Pay Now:</span>\n"
+"                        <span class=\"text-nowrap\" invisible=\"move_type != 'out_refund'\">Net Credit:</span>"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_move_form_retention_advance
+msgid ""
+"<span class=\"text-nowrap\" invisible=\"move_type != 'out_invoice'\">Less Advance Recovery:</span>\n"
+"                        <span class=\"text-nowrap\" invisible=\"move_type != 'out_refund'\">Advance Recovery Reversed:</span>"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_move_form_retention_advance
+msgid ""
+"<span class=\"text-nowrap\" invisible=\"move_type != 'out_invoice'\">Less Retention:</span>\n"
+"                        <span class=\"text-nowrap\" invisible=\"move_type != 'out_refund'\">Retention Reversed:</span>"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model,name:account_retention_advance.model_account_chart_template
+msgid "Account Chart Template"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_res_company__retention_account_id
+#: model:ir.model.fields,help:account_retention_advance.field_res_config_settings__retention_account_id
+msgid ""
+"Account holding the retention withheld by customers until it is released at "
+"handover."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_bank_statement_line__advance_available_amount
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move__advance_available_amount
+msgid "Advance Available"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_payment__advance_residual
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__advance_balance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.retention_advance_report_line_view_search
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_account_payment_list_retention_advance
+msgid "Advance Balance"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_payment__advance_invoice_count
+msgid "Advance Invoice Count"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_bank_statement_line__advance_payment_id
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move__advance_payment_id
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_payment__is_advance_payment
+msgid "Advance Payment"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_sale_order__advance_payment_count
+msgid "Advance Payment Count"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/sale_order.py:0
+#: model:ir.actions.act_window,name:account_retention_advance.action_account_advance_payments
+#: model:ir.model.fields,field_description:account_retention_advance.field_sale_order__advance_payment_ids
+#: model:ir.ui.menu,name:account_retention_advance.menu_account_advance_payments
+msgid "Advance Payments"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__advance_received
+msgid "Advance Received"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__advance_recovered
+msgid "Advance Recovered"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_bank_statement_line__advance_recovery_amount
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move__advance_recovery_amount
+#: model:ir.model.fields.selection,name:account_retention_advance.selection__account_move_line__retention_advance_type__advance_recovery
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_account_invoice_filter_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_move_form_retention_advance
+msgid "Advance Recovery"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_sale_order__advance_recovery_percent
+msgid "Advance Recovery %"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_account_payment__is_advance_payment
+msgid ""
+"Advance received from the customer before the work starts. It is recovered "
+"on the progress invoices and is not proposed as an outstanding credit on "
+"other invoices."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move_line.py:0
+msgid "Advance recovery %(payment)s"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.report_invoice_document_retention_advance
+msgid "Advance recovery reversed"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move_line.py:0
+msgid "Advance recovery reversed %(payment)s"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_account_payment_search_retention_advance
+msgid "Advances"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.actions.act_window,help:account_retention_advance.action_account_advance_payments
+msgid "Advances are recovered on the progress invoices of the project."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_retention_release_wizard__amount
+msgid ""
+"Allocated to the selected invoices, oldest first. Adjust the lines to "
+"allocate differently."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__line_ids
+msgid "Allocation"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_retention_advance_report__include_all
+msgid ""
+"Also list customers / projects that were invoiced without any retention or "
+"advance."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_bank_statement_line__amount_to_pay_now
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move__amount_to_pay_now
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.report_invoice_document_retention_advance
+msgid "Amount to Pay Now"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__amount
+msgid "Amount to Release"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report__date
+msgid "As at"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_advance_report.py:0
+msgid "As at %s"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model,name:account_retention_advance.model_res_company
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report__company_ids
+msgid "Companies"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_advance_report.py:0
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__company_id
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__company_id
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.retention_advance_report_line_view_search
+msgid "Company"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model,name:account_retention_advance.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report__create_uid
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__create_uid
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__create_uid
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report__create_date
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__create_date
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__create_date
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_advance_report.py:0
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__currency_id
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__currency_id
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard_line__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_advance_report.py:0
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__partner_id
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__partner_id
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.retention_advance_report_line_view_search
+msgid "Customer"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_account_bank_statement_line__advance_payment_id
+#: model:ir.model.fields,help:account_retention_advance.field_account_move__advance_payment_id
+msgid "Customer advance payment from which part of this invoice is recovered."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report__partner_ids
+msgid "Customers"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard_line__invoice_date
+msgid "Date"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_res_company__retention_percent
+#: model:ir.model.fields,field_description:account_retention_advance.field_res_config_settings__retention_percent
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.res_config_settings_view_form_retention
+msgid "Default Retention %"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.retention_advance_report_view_form
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.retention_release_wizard_view_form
+msgid "Discard"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_chart_template__display_name
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move__display_name
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_payment__display_name
+#: model:ir.model.fields,field_description:account_retention_advance.field_res_company__display_name
+#: model:ir.model.fields,field_description:account_retention_advance.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report__display_name
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__display_name
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__display_name
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard_line__display_name
+#: model:ir.model.fields,field_description:account_retention_advance.field_sale_order__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move_line__display_type
+msgid "Display Type"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__date_maturity
+msgid "Due Date"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_retention_release_wizard__date_maturity
+msgid "Due date of the released amount in the customer receivable."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_sale_order__expected_handover_date
+msgid "Due date of the retention withheld on the invoices of this project."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_release_wizard.py:0
+msgid "Enter an amount to release on at least one invoice."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid "Enter the Retention Due Date (expected handover date) on %s."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_sale_order__expected_handover_date
+msgid "Expected Handover Date"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_account_bank_statement_line__retention_due_date
+#: model:ir.model.fields,help:account_retention_advance.field_account_move__retention_due_date
+#: model:ir.model.fields,help:account_retention_advance.field_retention_release_wizard_line__retention_due_date
+msgid "Expected handover date: due date of the retention journal item."
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.retention_advance_report_view_form
+msgid "Export to Excel"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields.selection,name:account_retention_advance.selection__account_move__advance_recovery_method__fixed
+msgid "Fixed Amount"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard_line__retention_due_date
+msgid "Handover"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard_line__retention_residual
+msgid "Held"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_chart_template__id
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move__id
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move_line__id
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_payment__id
+#: model:ir.model.fields,field_description:account_retention_advance.field_res_company__id
+#: model:ir.model.fields,field_description:account_retention_advance.field_res_config_settings__id
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report__id
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__id
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__id
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard_line__id
+#: model:ir.model.fields,field_description:account_retention_advance.field_sale_order__id
+msgid "ID"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report__include_all
+msgid "Include projects without retention or advance"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard_line__invoice_id
+msgid "Invoice"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_account_bank_statement_line__amount_to_pay_now
+#: model:ir.model.fields,help:account_retention_advance.field_account_move__amount_to_pay_now
+msgid "Invoice total less retention and advance recovery."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_account_move_line__retention_origin_move_id
+msgid ""
+"Invoice whose retention is released (release entries) or reversed (credit "
+"notes)."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__invoice_ids
+msgid "Invoices"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__journal_id
+msgid "Journal"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model,name:account_retention_advance.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model,name:account_retention_advance.model_account_move_line
+msgid "Journal Item"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report__write_uid
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__write_uid
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__write_uid
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report__write_date
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__write_date
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__write_date
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.report_invoice_document_retention_advance
+msgid "Less: Advance Recovery"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.report_invoice_document_retention_advance
+msgid "Less: Retention ("
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_retention_release_wizard__order_ids
+msgid "Limit the invoices to these projects."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report__line_ids
+msgid "Lines"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_res_company__retention_journal_id
+#: model:ir.model.fields,help:account_retention_advance.field_res_config_settings__retention_journal_id
+msgid ""
+"Miscellaneous journal used for the entries moving released retention to the "
+"receivable."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_bank_statement_line__needed_retention_dirty
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move__needed_retention_dirty
+msgid "Needed Retention Dirty"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_bank_statement_line__needed_retention_lines
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move__needed_retention_lines
+msgid "Needed Retention Lines"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.report_invoice_document_retention_advance
+msgid "Net Credit"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_move_form_retention_advance
+msgid ""
+"On a credit note, retention and advance recovery are reversed in proportion "
+"of the work credited."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_account_payment__advance_residual
+msgid "Part of the payment not yet matched with invoices."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_account_bank_statement_line__advance_available_amount
+#: model:ir.model.fields,help:account_retention_advance.field_account_move__advance_available_amount
+msgid "Part of the selected advance that this invoice can still recover."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_sale_order__advance_recovery_percent
+msgid ""
+"Part of the work done recovered from the advance on each progress invoice."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model,name:account_retention_advance.model_account_payment
+msgid "Payments"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_account_bank_statement_line__retention_percent
+#: model:ir.model.fields,help:account_retention_advance.field_account_move__retention_percent
+msgid ""
+"Percentage of the work done (untaxed amount) withheld by the customer until "
+"handover."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_advance_report.py:0
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_bank_statement_line__project_sale_order_id
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move__project_sale_order_id
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_payment__advance_order_id
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__order_id
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard_line__project_sale_order_id
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_account_invoice_filter_retention_advance
+msgid "Project"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__order_ids
+msgid "Projects"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_payment.py:0
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_payment__advance_invoice_ids
+msgid "Recovering Invoices"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_bank_statement_line__advance_recovery_percent
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move__advance_recovery_percent
+msgid "Recovery %"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_bank_statement_line__advance_recovery_fixed_amount
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move__advance_recovery_fixed_amount
+msgid "Recovery Amount"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_bank_statement_line__advance_recovery_method
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move__advance_recovery_method
+msgid "Recovery Method"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__ref
+msgid "Reference"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.actions.act_window,help:account_retention_advance.action_account_advance_payments
+msgid "Register an advance received from a customer"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.retention_release_wizard_view_form
+msgid "Release"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__date
+msgid "Release Date"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.res_config_settings_view_form_retention
+msgid "Release Journal"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+#: model:ir.actions.act_window,name:account_retention_advance.action_retention_release_wizard
+#: model:ir.actions.act_window,name:account_retention_advance.action_retention_release_wizard_partner
+#: model:ir.actions.server,name:account_retention_advance.action_server_release_retention
+#: model:ir.model,name:account_retention_advance.model_retention_release_wizard
+#: model:ir.ui.menu,name:account_retention_advance.menu_retention_release
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.retention_release_wizard_view_form
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_move_form_retention_advance
+msgid "Release Retention"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model,name:account_retention_advance.model_retention_release_wizard_line
+msgid "Release Retention - Invoice"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid "Release retention for one customer and one company at a time."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_release_wizard.py:0
+msgid "Release retention of invoices in one currency at a time."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__report_id
+msgid "Report"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_bank_statement_line__retention_amount
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move__retention_amount
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard_line__retention_amount
+#: model:ir.model.fields.selection,name:account_retention_advance.selection__account_move_line__display_type__retention
+#: model:ir.model.fields.selection,name:account_retention_advance.selection__account_move_line__retention_advance_type__retention
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.res_config_settings_view_form_retention
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_move_form_retention_advance
+msgid "Retention"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_bank_statement_line__retention_percent
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move__retention_percent
+#: model:ir.model.fields,field_description:account_retention_advance.field_sale_order__retention_percent
+msgid "Retention %"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move_line.py:0
+msgid "Retention %(percent)s%%"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_advance_report.py:0
+#: model:ir.actions.act_window,name:account_retention_advance.action_retention_advance_report
+#: model:ir.ui.menu,name:account_retention_advance.menu_retention_advance_report
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_move_form_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_order_form_retention_advance
+msgid "Retention & Advance"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.res_config_settings_view_form_retention
+msgid "Retention & Advance Recovery"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_advance_report.py:0
+msgid "Retention & Advance as at %s"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__retention_balance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.retention_advance_report_line_view_search
+msgid "Retention Balance"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_bank_statement_line__retention_due_date
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move__retention_due_date
+msgid "Retention Due Date"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_bank_statement_line__retention_residual
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move__retention_residual
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__retention_held
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard__retention_held
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_account_invoice_filter_retention_advance
+msgid "Retention Held"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move_line__retention_key
+msgid "Retention Key"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move_line__retention_origin_move_id
+msgid "Retention Origin Invoice"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/res_company.py:0
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.res_config_settings_view_form_retention
+msgid "Retention Receivable"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_res_company__retention_account_id
+#: model:ir.model.fields,field_description:account_retention_advance.field_res_config_settings__retention_account_id
+msgid "Retention Receivable Account"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_release_wizard.py:0
+#: model:ir.model.fields.selection,name:account_retention_advance.selection__account_move_line__retention_advance_type__retention_release
+msgid "Retention Release"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_res_company__retention_journal_id
+#: model:ir.model.fields,field_description:account_retention_advance.field_res_config_settings__retention_journal_id
+msgid "Retention Release Journal"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__retention_released
+msgid "Retention Released"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.retention_advance_report_line_view_pivot
+msgid "Retention and Advance"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_advance_report.py:0
+#: model:ir.model,name:account_retention_advance.model_retention_advance_report
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.retention_advance_report_view_form
+msgid "Retention and Advance Report"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model,name:account_retention_advance.model_retention_advance_report_line
+msgid "Retention and Advance Report Line"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid ""
+"Retention and advance recovery (%(deductions)s) are higher than the total of"
+" %(move)s (%(total)s)."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid "Retention and advance recovery percentages must be between 0 and 100."
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.report_invoice_document_retention_advance
+msgid "Retention of"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid "Retention of %s"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_account_bank_statement_line__retention_residual
+#: model:ir.model.fields,help:account_retention_advance.field_account_move__retention_residual
+#: model:ir.model.fields,help:account_retention_advance.field_retention_release_wizard_line__retention_residual
+msgid ""
+"Retention of this invoice not yet released nor reversed by a credit note."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_res_company__retention_percent
+#: model:ir.model.fields,help:account_retention_advance.field_res_config_settings__retention_percent
+msgid "Retention percentage proposed on new projects and customer invoices."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_release_wizard.py:0
+msgid "Retention release %s"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_release_wizard.py:0
+msgid "Retention release - %s"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move_line.py:0
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.report_invoice_document_retention_advance
+msgid "Retention reversed"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_sale_order__retention_percent
+msgid "Retention withheld on each progress invoice of this project."
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.res_config_settings_view_form_retention
+msgid ""
+"Retention withheld on progress invoices is booked on this account until it "
+"is released."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_account_move_line__retention_advance_type
+msgid "Retention/Advance"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model,name:account_retention_advance.model_sale_order
+msgid "Sales Order"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_account_payment__advance_order_id
+msgid "Sales order (project) this advance belongs to."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_account_bank_statement_line__project_sale_order_id
+#: model:ir.model.fields,help:account_retention_advance.field_account_move__project_sale_order_id
+#: model:ir.model.fields,help:account_retention_advance.field_retention_release_wizard_line__project_sale_order_id
+msgid ""
+"Sales order the invoice was created from. Invoices without sales order are "
+"grouped per customer."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid "Select posted customer invoices with retention still held."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid "Select the advance payment to recover from on %s."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid ""
+"Set the Retention Receivable account in the Accounting settings before "
+"posting %s."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid ""
+"Set the Retention Receivable account in the Accounting settings of %s before"
+" using retention."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,help:account_retention_advance.field_account_move_line__retention_advance_type
+msgid ""
+"Technical role of the journal item in the retention / advance recovery flow."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/res_company.py:0
+msgid "The Retention Receivable account %s belongs to another company."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/res_company.py:0
+msgid "The Retention Receivable account %s must allow reconciliation."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/res_company.py:0
+msgid ""
+"The Retention Receivable account %s must be a Current Assets or Non-current "
+"Assets account. A receivable type account would make the retention part of "
+"the amount due on the invoice."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/res_company.py:0
+msgid ""
+"The Retention Release Journal must be a miscellaneous journal of the "
+"company."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid ""
+"The advance %(payment)s is booked on %(account)s, which is not the "
+"receivable account of %(move)s."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid ""
+"The advance %(payment)s must be a payment received from %(partner)s in "
+"%(company)s."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid ""
+"The advance %s has no posted journal entry on a receivable account, so it "
+"cannot be recovered. Make sure the payment is confirmed and its payment "
+"method has an outstanding receipts account."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid "The advance recovery amount cannot be negative."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid ""
+"The advance recovery of %(move)s cannot be lower than the part already "
+"reversed by credit notes (%(amount)s)."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_release_wizard.py:0
+msgid ""
+"The allocation (%(allocated)s) differs from the amount to release "
+"(%(amount)s)."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_release_wizard.py:0
+msgid "The amount to release cannot be negative."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/res_company.py:0
+msgid "The default retention percentage must be between 0 and 100."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_release_wizard.py:0
+msgid "The due date cannot be before the release date."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_release_wizard.py:0
+msgid ""
+"The release date %(date)s is in a locked period (%(locks)s). Choose a later "
+"date."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid ""
+"The retention / advance recovery journal items of %s are out of date (the "
+"settings changed after it was saved). Change the retention or the advance "
+"recovery on the document and save it again."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid ""
+"The retention of %(move)s cannot be lower than the part already released or "
+"credited (%(amount)s)."
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard_line__amount
+msgid "To Release"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_advance_report.py:0
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.retention_advance_report_line_view_list
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.retention_release_wizard_view_form
+msgid "Total"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_out_invoice_tree_retention_advance
+msgid "Total Advance Recovery"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_advance_report_line__total_invoiced
+msgid "Total Invoiced"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_out_invoice_tree_retention_advance
+msgid "Total Retention"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.view_out_invoice_tree_retention_advance
+msgid "Total Retention Held"
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.retention_advance_report_view_form
+msgid "View"
+msgstr ""
+
+#. module: account_retention_advance
+#: model:ir.model.fields,field_description:account_retention_advance.field_retention_release_wizard_line__wizard_id
+msgid "Wizard"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid ""
+"You cannot cancel %s: part of its retention was released or reversed by a "
+"credit note. Reverse those entries first or issue a credit note."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/models/account_move.py:0
+msgid ""
+"You cannot recover %(amount)s from %(payment)s on %(move)s: only "
+"%(available)s of this advance is left."
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_release_wizard.py:0
+msgid ""
+"You cannot release %(amount)s on %(invoice)s: only %(held)s of retention is "
+"held."
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.report_invoice_document_retention_advance
+msgid "due on handover ("
+msgstr ""
+
+#. module: account_retention_advance
+#: model_terms:ir.ui.view,arch_db:account_retention_advance.retention_release_wizard_view_form
+msgid "e.g. Handover certificate 12/2026"
+msgstr ""
+
+#. module: account_retention_advance
+#. odoo-python
+#: code:addons/account_retention_advance/wizard/retention_advance_report.py:0
+msgid "string"
+msgstr ""
